@@ -1,55 +1,56 @@
 # Web para Todos
 
-Site estático para um trabalho de extensão universitária sobre acessibilidade e inclusão digital. Foi feito com HTML5, CSS3 e JavaScript puro, sem instalação de dependências.
+**Acessibilidade digital começa quando todas as pessoas são consideradas.**
 
-## Como abrir
+O **Web para Todos** é um projeto autoral de extensão universitária dedicado a ampliar a conversa sobre acessibilidade e inclusão de pessoas com deficiência em aplicações web e em outras experiências digitais. A proposta combina informação, exemplos interativos e uma atividade formativa para aproximar o tema da comunidade.
 
-1. Extraia o ZIP, preservando a estrutura das pastas.
-2. Abra `index.html` no navegador. A página, o painel de acessibilidade, o laboratório e o quiz funcionam localmente.
-3. Se o navegador restringir vídeos ou legendas ao abrir arquivos diretamente, inicie um servidor local na pasta do projeto. Por exemplo, com Python instalado: `python -m http.server 8000`. Depois acesse `http://localhost:8000`.
+## Contexto
 
-Não é preciso publicar o site para apresentá-lo em um computador. Todos os estilos e scripts são locais.
+A internet participa de atividades essenciais: estudar, trabalhar, acessar serviços, buscar informação e se comunicar. Apesar disso, muitas interfaces ainda pressupõem que toda pessoa enxerga, ouve, compreende e interage da mesma maneira. Uma imagem sem descrição, um vídeo sem legenda, um controle que exige mouse ou uma instrução confusa podem transformar uma tarefa simples em uma barreira.
 
-## Onde colocar os vídeos e as legendas
+Essas barreiras não estão nas pessoas. Elas surgem de escolhas feitas ao planejar, escrever, desenhar e desenvolver produtos digitais. Por isso, a acessibilidade deve fazer parte do projeto desde o início e ser avaliada com a participação de quem utiliza diferentes formas de acesso.
 
-| Conteúdo | Caminho esperado |
-| --- | --- |
-| Vídeo principal em MP4 | `videos/video-principal.mp4` |
-| Legenda em português, formato WebVTT | `legendas/video-principal.vtt` |
-| Vídeo com interpretação em Libras | `videos/video-libras.mp4` |
+## Proposta
 
-Os dois arquivos MP4 **não estão incluídos**. Enquanto não forem adicionados, a página mostra espaços informativos em vez de um player quebrado. O vídeo principal usa o elemento HTML `<video>` e a legenda é ligada com `<track kind="captions">` em `index.html`.
+O projeto usa o próprio site como espaço de aprendizagem. Enquanto conhece o tema, o visitante encontra recursos e exemplos que mostram como uma experiência digital pode oferecer diferentes caminhos para chegar ao mesmo conteúdo. A linguagem busca ser clara para quem está começando, sem deixar de apresentar práticas úteis para quem cria aplicações.
 
-O arquivo `.vtt` incluído é **um modelo** para o roteiro sugerido. Depois da gravação, sincronize os tempos, confira todas as falas e sons relevantes e atualize também o texto em “Leia o roteiro / transcrição sugerida”. Se o vídeo trouxer informação visual que não aparece no áudio, descreva-a na narração ou na transcrição. O vídeo em Libras deve acompanhar fielmente o conteúdo do vídeo principal.
+A proposta contempla diferentes necessidades, incluindo as relacionadas à visão, à audição, à mobilidade e à compreensão. Nenhuma dessas categorias representa todas as experiências de uma pessoa com deficiência; elas servem como ponto de partida para reconhecer barreiras e conversar sobre soluções.
 
-Se preferir outros nomes de arquivos, altere os caminhos nos elementos `<source>` e `<track>` de `index.html`.
+## Objetivo
 
-## Estrutura
+**Objetivo geral:** promover a conscientização sobre a importância da acessibilidade digital e incentivar a criação de aplicações mais inclusivas.
 
-```text
-Web-para-Todos/
-├── index.html                 Página completa
-├── css/styles.css             Layout, responsividade e alto contraste
-├── js/main.js                 Painel, laboratório, quiz e vídeos
-├── images/                    Capa do vídeo e ícone do site
-├── legendas/video-principal.vtt  Legenda modelo
-└── videos/LEIA-ME.txt         Instruções para os MP4
-```
+**Objetivos específicos:**
 
-## Recursos incluídos
+- Explicar, de forma acessível, como barreiras digitais afetam a participação das pessoas.
+- Apresentar exemplos de boas práticas de conteúdo, interação e desenvolvimento web.
+- Permitir que o público compare barreiras e correções em um laboratório interativo.
+- Estimular a reflexão por meio de um quiz e de uma proposta de workshop.
+- Oferecer o conteúdo audiovisual em formatos complementares, como legendas, transcrição e interpretação em Libras.
 
-- Navegação por teclado, link “Pular para o conteúdo principal” e foco visível.
-- Estrutura semântica com `header`, `nav`, `main`, `section`, `article`, `footer` e `button`.
-- Uso pontual de WAI-ARIA para rótulos, estados (`aria-pressed`, `aria-expanded`) e resultado do quiz (`role="status"`).
-- Painel com texto maior ou menor, alto contraste, destaque de links e restauração. As escolhas são guardadas neste navegador, quando o armazenamento estiver disponível.
-- Demonstrações de imagem, teclado e vídeo no laboratório; quiz de três perguntas.
-- Preferência de movimento reduzido respeitada pelo CSS.
+## Para quem é
 
-## Antes de apresentar
+O Web para Todos se dirige ao público geral, a estudantes, educadores e a pessoas que participam da criação de produtos digitais. O conteúdo foi pensado para apoiar tanto uma visita individual quanto conversas em sala de aula, eventos e ações de extensão.
 
-Teste a página com Tab, Shift+Tab, Enter e Espaço. Confira o contraste e a leitura com um leitor de telas. Depois de incluir os vídeos, verifique a sincronia das legendas, a transcrição e a interpretação em Libras com pessoas que usam esses recursos. A presença de controles de acessibilidade, por si só, não substitui essa validação.
+## A experiência
 
-## Referências
+O percurso começa com uma introdução à acessibilidade digital e apresenta situações em que diferentes pessoas podem encontrar obstáculos. No laboratório, o visitante escolhe uma barreira e observa uma alternativa mais acessível. O quiz retoma as ideias centrais. Uma proposta de workshop organiza a discussão e convida os participantes a aplicar o aprendizado em uma pequena atividade.
 
-- [W3C WAI — WCAG em resumo](https://www.w3.org/WAI/standards-guidelines/wcag/glance/)
-- [W3C WAI — mídia acessível](https://www.w3.org/WAI/media/av/)
+O projeto também reserva espaço para uma apresentação em vídeo acompanhada de legendas, transcrição textual e interpretação em Libras. Esses formatos ampliam as formas de acompanhar a mensagem e reforçam, na própria experiência, o princípio de que informação importante deve estar disponível por mais de um caminho.
+
+## Compromisso com a acessibilidade
+
+O site foi concebido com navegação por teclado, foco visível, estrutura semântica e opções de leitura como ajuste do tamanho do texto, alto contraste e destaque de links. Esses recursos expressam a proposta do projeto, mas a acessibilidade é um processo contínuo: conteúdos, vídeos e interações devem ser revisados e testados com pessoas que usam diferentes tecnologias e estratégias de acesso.
+
+## Autoria e licenciamento
+
+**Autoria:** Luiz Ricardo (@eubastosdev).
+
+O código-fonte do projeto está disponível sob a **Licença MIT**. Os textos, roteiros, legendas, ilustrações e demais materiais educativos originais incluídos no projeto estão disponíveis sob a **Creative Commons Atribuição 4.0 Internacional (CC BY 4.0)**. Essa licença permite compartilhar e adaptar o conteúdo, inclusive comercialmente, com o devido crédito ao autor, indicação de alterações e referência à licença.
+
+O escopo de cada licença e os respectivos termos estão em [Licenciamento](LICENSE.md).
+
+## Referências de orientação
+
+- [W3C Web Accessibility Initiative — WCAG em resumo](https://www.w3.org/WAI/standards-guidelines/wcag/glance/)
+- [W3C Web Accessibility Initiative — mídia acessível](https://www.w3.org/WAI/media/av/)
